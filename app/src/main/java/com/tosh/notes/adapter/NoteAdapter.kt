@@ -16,7 +16,7 @@ class NoteAdapter(private val noteList: MutableList<Note> = mutableListOf()): Re
     override fun getItemCount() = noteList.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        (holder as ViewHolder).onBind(noteList[position])
     }
 
     class ViewHolder(val view: View): RecyclerView.ViewHolder(view){
