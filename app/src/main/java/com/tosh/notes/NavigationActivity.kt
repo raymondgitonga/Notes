@@ -3,6 +3,8 @@ package com.tosh.notes
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.replace
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -26,4 +28,15 @@ class NavigationActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    private fun replaceFragment(fragment: Fragment){
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.nav_host_fragment, fragment)
+            .commit()
+
+    }
+
+
 }

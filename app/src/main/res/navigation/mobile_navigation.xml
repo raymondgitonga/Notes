@@ -9,12 +9,12 @@
         android:id="@+id/navigation_tasks"
         android:name="com.tosh.notes.fragment.TasksFragment"
         android:label="@string/title_task"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_tasks" />
 
     <fragment
         android:id="@+id/navigation_notes"
         android:name="com.tosh.notes.fragment.NotesFragment"
         android:label="@string/title_note"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_notes" />
 
 </navigation>
