@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tosh.notes.R
 import com.tosh.notes.model.Note
+import kotlinx.android.synthetic.main.item_note.view.*
 
 class NoteAdapter(private val noteList: MutableList<Note> = mutableListOf()): RecyclerView.Adapter<RecyclerView.ViewHolder> (){
 
@@ -22,7 +23,7 @@ class NoteAdapter(private val noteList: MutableList<Note> = mutableListOf()): Re
     class ViewHolder(val view: View): RecyclerView.ViewHolder(view){
 
         fun onBind(note: Note){
-
+            view.descriptionView.text = note.description
         }
 
     }
