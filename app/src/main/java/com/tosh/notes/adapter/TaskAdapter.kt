@@ -22,6 +22,10 @@ class TaskAdapter(taskList: MutableList<Task> = mutableListOf()): BaseRecyclerAd
     class ViewHolder(view: View): BaseViewHolder<Task>(view) {
         override fun onBind(data: Task) {
             view.task_title.text = data.title
+
+            data.todos?.forEach { todo ->
+                LayoutInflater.from(view.context).inflate(R.layout.view_todo, view.todoContainer, false)
+            }
         }
     }
 }
