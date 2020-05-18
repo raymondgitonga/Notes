@@ -33,7 +33,7 @@ class TasksFragment : Fragment() {
         val adapter = TaskAdapter(
             mutableListOf(
                 Task("Testing one", mutableListOf(
-                    Todo("Todo 1"),
+                    Todo("Todo 1", true),
                     Todo("Todo 2")
                 )),
                 Task("Testing two")
