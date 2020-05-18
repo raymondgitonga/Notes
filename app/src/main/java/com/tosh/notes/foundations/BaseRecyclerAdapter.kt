@@ -10,9 +10,9 @@ abstract class BaseRecyclerAdapter<T>(protected val masterList: MutableList<T> =
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) =
         (holder as BaseViewHolder<T>).onBind(masterList[position])
 
-    abstract class BaseViewHolder<E>(val view: View): RecyclerView.ViewHolder(view){
+    abstract class BaseViewHolder<T>(val view: View): RecyclerView.ViewHolder(view){
 
-        abstract fun onBind(data: E)
+        abstract fun onBind(data: T)
 
     }
 }
